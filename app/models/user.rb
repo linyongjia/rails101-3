@@ -7,4 +7,7 @@ class User < ApplicationRecord
     has_many :gorups
     has_many :posts
 
+    has_many :group_relationships
+    has_many :patricipated_group, :through => :gtoup_relationships, :source => :group
+    
 end
